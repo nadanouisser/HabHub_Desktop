@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.backOffice.ChiensBackOfficeController">
+   <children>
+      <HBox prefHeight="800.0" prefWidth="1280.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="220.0" styleClass="navbar">
+               <children>
+                  <Pane prefHeight="39.0" prefWidth="220.0" />
+                  <ImageView fitHeight="40.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/img/backOffice/navBar/Logo+Text%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="23.0" prefWidth="220.0" />
+                  <Line endX="100.0" startX="-70.0" stroke="#979797" />
+                  <Pane prefHeight="32.0" prefWidth="220.0" />
+                  <Button mnemonicParsing="false" onAction="#switchBusinessBack" prefHeight="46.0" prefWidth="220.0" styleClass="navItem" text="   Business Partners" textFill="#515151">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="25.0" layoutX="-100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/img/backOffice/navBar/business.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchProductsBack" prefHeight="46.0" prefWidth="263.0" styleClass="navItem" text="  Products               ">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/img/backOffice/navBar/products.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchDogsBack" prefHeight="46.0" prefWidth="263.0" styleClass="navItemSelected" text="  Manage Dogs      ">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/img/backOffice/navBar/dogsSelected.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchUsersBack" prefHeight="46.0" prefWidth="263.0" styleClass="navItemUnderSelected" text="  Manage Users     " textFill="#515151">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/img/backOffice/navBar/users.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="220.0" styleClass="navItem" />
+               </children>
+            </VBox>
+            <VBox prefHeight="800.0" prefWidth="1060.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="72.0" prefWidth="1060.0">
+                     <children>
+                        <Text fill="#515151" lineSpacing="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Manage Dogs">
+                           <font>
+                              <Font name="Lato Regular" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Pane prefHeight="100.0" prefWidth="673.0" HBox.hgrow="ALWAYS" />
+                        <Button minHeight="55.0" minWidth="55.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 50;" styleClass="transparent">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="21.0" prefWidth="1060.0" />
+                  <HBox prefHeight="653.0" prefWidth="1060.0">
+                     <children>
+                        <Pane minWidth="20.0" prefHeight="597.0" prefWidth="10.0" />
+                        <VBox prefHeight="700.0" prefWidth="1040.0" styleClass="tableBox">
+                           <children>
+                              <TabPane prefHeight="609.0" prefWidth="1040.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="160.0">
+                                <tabs>
+                                  <Tab text="Dogs">
+                                       <content>
+                                          <VBox prefHeight="574.0" prefWidth="966.0">
+                                             <children>
+                                                <Pane prefHeight="82.0" prefWidth="1020.0" />
+                                                <HBox alignment="TOP_CENTER" maxHeight="70.0" prefHeight="51.0" prefWidth="600.0" styleClass="transparent">
+                                                   <children>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="2.0" HBox.hgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER_LEFT" maxHeight="60.0" maxWidth="1300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="960.0" styleClass="searchBox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="750.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="599.0" styleClass="searchBar" HBox.hgrow="SOMETIMES">
+                                                               <children>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/searchBar/zoom-in.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                                  <TextField fx:id="searchBoxDogs" prefHeight="25.0" prefWidth="441.0" promptText="Search for Names, Dog Breeds, Location" styleClass="transparent" />
+                                                               </children>
+                                                            </HBox>
+                                                            <Pane prefHeight="51.0" prefWidth="200.0" />
+                                                            <Button fx:id="refreshButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#refreshDogTable" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/refresh.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="addButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#getDogAddView" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/addButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="editButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#getDogEditView" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/editButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="deleteButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#deleteDog" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/deleteButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="8.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="581.0" prefWidth="1020.0">
+                                                   <children>
+                                                      <TableView fx:id="dogTableView" prefHeight="511.0" prefWidth="984.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="idCol" minWidth="97.0" prefWidth="97.0" text="ID" />
+                                                            <TableColumn fx:id="dogNameCol" minWidth="107.0" prefWidth="119.0" text="Dog Name" />
+                                                            <TableColumn fx:id="dogOwnerCol" minWidth="120.0" prefWidth="120.0" text="Dog Owner" />
+                                                            <TableColumn fx:id="dogAgeCol" minWidth="84.0" prefWidth="102.0" text="Age" />
+                                                            <TableColumn fx:id="dogGenderCol" minWidth="88.0" prefWidth="104.0" text="Gender" />
+                                                            <TableColumn fx:id="dogDescCol" minWidth="105.0" prefWidth="126.0" text="Description" />
+                                                            <TableColumn fx:id="dogGroupCol" minWidth="39.0" prefWidth="103.0" text="Group" />
+                                                            <TableColumn fx:id="dogBreedCol" minWidth="89.0" prefWidth="104.0" text="Breed" />
+                                                            <TableColumn fx:id="dogColorCol" minWidth="89.0" prefWidth="93.0" text="Color" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                  <Tab text="Adoption Posts">
+                                       <content>
+                                          <VBox prefHeight="574.0" prefWidth="966.0">
+                                             <children>
+                                                <Pane prefHeight="82.0" prefWidth="1020.0" />
+                                                <HBox alignment="TOP_CENTER" maxHeight="70.0" prefHeight="51.0" prefWidth="600.0" styleClass="transparent">
+                                                   <children>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="2.0" HBox.hgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER_LEFT" maxHeight="60.0" maxWidth="1300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="960.0" styleClass="searchBox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="750.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="599.0" styleClass="searchBar" HBox.hgrow="SOMETIMES">
+                                                               <children>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../../../../../Users/Ed/Desktop/srcIheb/assets/img/searchBar/zoom-in.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                                  <TextField fx:id="searchBox11" prefHeight="25.0" prefWidth="441.0" promptText="Search for Names, Dog Breeds, Location" styleClass="transparent" />
+                                                               </children>
+                                                            </HBox>
+                                                            <Pane prefHeight="51.0" prefWidth="200.0" />
+                                                            <Button fx:id="refreshButton1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#refreshAdoptionTable" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/refresh.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="addButton1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#getAnnonceAddView" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/addButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="editButton1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#getAnnonceEditView" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/editButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="deleteButton1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#deleteAnnonceAdoption" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/deleteButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="8.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="581.0" prefWidth="1020.0">
+                                                   <children>
+                                                      <TableView fx:id="adoptionTableView" prefHeight="511.0" prefWidth="984.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="adoptionNomChien" minWidth="126.0" prefWidth="204.0" text="Dog Name" />
+                                                            <TableColumn fx:id="adoptionNomIndividu" minWidth="117.0" prefWidth="138.0" text="Dog Owner" />
+                                                            <TableColumn fx:id="adoptionDescription" minWidth="247.0" prefWidth="248.0" text="Description" />
+                                                            <TableColumn fx:id="adoptionDate" minWidth="110.0" prefWidth="143.0" text="Posted On " />
+                                                            <TableColumn fx:id="adoptionLocalisation" minWidth="100.0" prefWidth="168.0" text="Location" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Mating Posts">
+                                       <content>
+                                          <VBox prefHeight="574.0" prefWidth="966.0">
+                                             <children>
+                                                <Pane prefHeight="82.0" prefWidth="1020.0" />
+                                                <HBox alignment="TOP_CENTER" maxHeight="70.0" prefHeight="51.0" prefWidth="600.0" styleClass="transparent">
+                                                   <children>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="2.0" HBox.hgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER_LEFT" maxHeight="60.0" maxWidth="1300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="960.0" styleClass="searchBox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="750.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="599.0" styleClass="searchBar" HBox.hgrow="SOMETIMES">
+                                                               <children>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/searchBar/zoom-in.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                                  <TextField fx:id="searchBoxMating" prefHeight="25.0" prefWidth="441.0" promptText="Search for Names, Dog Breeds, Location" styleClass="transparent" />
+                                                               </children>
+                                                            </HBox>
+                                                            <Pane prefHeight="51.0" prefWidth="200.0" />
+                                                            <Button fx:id="refreshButton2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#refreshMatingTable" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/refresh.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="addButton2" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/addButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="editButton2" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/editButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="deleteButton2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#deleteMating" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/deleteButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="8.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="581.0" prefWidth="1020.0">
+                                                   <children>
+                                                      <TableView fx:id="matingTableView" prefHeight="511.0" prefWidth="984.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="mIdCol" minWidth="104.0" prefWidth="104.0" text="ID" />
+                                                            <TableColumn fx:id="mDogNameCol" minWidth="149.0" prefWidth="150.0" text="Dog Name" />
+                                                            <TableColumn fx:id="mDogOwnerCol" minWidth="92.0" prefWidth="131.0" text="Dog Owner" />
+                                                            <TableColumn fx:id="mDescCol" minWidth="81.0" prefWidth="193.0" text="Description" />
+                                                            <TableColumn fx:id="mPostedOnCol" minWidth="0.0" prefWidth="137.0" text="Posted On " />
+                                                            <TableColumn fx:id="mLocationCol" maxWidth="581.0" minWidth="100.0" prefWidth="229.0" text="Location" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Lost Dogs">
+                                       <content>
+                                          <VBox prefHeight="574.0" prefWidth="966.0">
+                                             <children>
+                                                <Pane prefHeight="82.0" prefWidth="1020.0" />
+                                                <HBox alignment="TOP_CENTER" maxHeight="70.0" prefHeight="51.0" prefWidth="600.0" styleClass="transparent">
+                                                   <children>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="2.0" HBox.hgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER_LEFT" maxHeight="60.0" maxWidth="1300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="960.0" styleClass="searchBox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="750.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="599.0" styleClass="searchBar" HBox.hgrow="SOMETIMES">
+                                                               <children>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/searchBar/zoom-in.png" />
+                                                                     </image>
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </ImageView>
+                                                                  <TextField fx:id="searchBoxLost" prefHeight="25.0" prefWidth="441.0" promptText="Search for Names, Dog Breeds, Location" styleClass="transparent" />
+                                                               </children>
+                                                            </HBox>
+                                                            <Pane prefHeight="51.0" prefWidth="200.0" />
+                                                            <Button fx:id="refreshButton3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#refreshLostTable" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/refresh.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="addButton3" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/addButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="editButton3" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/editButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="deleteButton3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#deleteLost" prefHeight="35.0" prefWidth="35.0" styleClass="transparent">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../../assets/img/backOffice/navBar/deleteButton.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                            <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="41.0" prefWidth="8.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="TOP_CENTER" prefHeight="581.0" prefWidth="1020.0">
+                                                   <children>
+                                                      <TableView fx:id="lostTableView" prefHeight="511.0" prefWidth="984.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="lIdCol" minWidth="147.0" prefWidth="147.0" text="ID" />
+                                                            <TableColumn fx:id="lDogNameCol" minWidth="136.0" prefWidth="136.0" text="Dog Name" />
+                                                            <TableColumn fx:id="lDogOwnerCol" minWidth="92.0" prefWidth="152.0" text="Dog Owner" />
+                                                            <TableColumn fx:id="lDescCol" minWidth="139.0" prefWidth="176.0" text="Description" />
+                                                            <TableColumn fx:id="lPostedOnCol" minWidth="49.0" prefWidth="142.0" text="Posted On " />
+                                                            <TableColumn fx:id="lLocationCol" minWidth="100.0" prefWidth="194.0" text="Location" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </VBox>
+                        <Pane maxWidth="10.0" minWidth="20.0" prefHeight="105.0" prefWidth="1060.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@chiensbackoffice.css" />
+      <URL value="@../navBar.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="621.0" prefWidth="504.0" styleClass="mainFxmlClass" stylesheets="@popup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.backOffice.AnnoncePopUpController">
+   <children>
+      <VBox prefHeight="621.0" prefWidth="504.0">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="68.0" prefWidth="504.0">
+               <children>
+                  <Label text="Post Form" textFill="#e0642c">
+                     <HBox.margin>
+                        <Insets left="32.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="30.0" prefWidth="446.0" />
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="504.0">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="202.0" prefWidth="190.0">
+                     <children>
+                        <Label text="Dog Name" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox maxHeight="100.0" maxWidth="200.0" prefHeight="42.0" prefWidth="199.0" styleClass="inputField">
+                           <children>
+                              <TextField fx:id="dogNameLabel" prefHeight="68.0" prefWidth="187.0" styleClass="transparent" />
+                           </children></HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <Pane prefHeight="60.0" prefWidth="11.0" />
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="64.0" prefWidth="180.0">
+                     <children>
+                        <Label text="Color" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox maxHeight="100.0" maxWidth="200.0" prefHeight="42.0" prefWidth="199.0" styleClass="inputField">
+                           <children>
+                              <TextField fx:id="colorLabel" prefHeight="98.0" prefWidth="176.0" styleClass="transparent" />
+                           </children></HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="20.0" prefWidth="446.0" />
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="446.0">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="202.0" prefWidth="190.0">
+                     <children>
+                        <Label text="Race" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="raceComboBox" prefWidth="150.0" visibleRowCount="5" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <Pane prefHeight="60.0" prefWidth="11.0" />
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="64.0" prefWidth="180.0">
+                     <children>
+                        <Label text="Group" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="groupeComboBox" prefWidth="150.0" visibleRowCount="5" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="20.0" prefWidth="446.0" />
+            <HBox prefHeight="49.0" prefWidth="504.0">
+               <children>
+                  <Pane prefHeight="56.0" prefWidth="85.0" />
+                  <VBox prefHeight="56.0" prefWidth="172.0">
+                     <children>
+                        <Label text="Age" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="CENTER" maxHeight="100.0" maxWidth="200.0" prefHeight="42.0" prefWidth="199.0" styleClass="inputField">
+                           <children>
+                              <TextField fx:id="ageLabel" alignment="CENTER" prefHeight="68.0" prefWidth="187.0" styleClass="transparent" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="56.0" prefWidth="73.0" />
+                  <VBox prefHeight="56.0" prefWidth="131.0">
+                     <children>
+                        <Label text="Months/Years" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="ageComboBox" prefHeight="37.0" prefWidth="110.0" visibleRowCount="2" />
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="56.0" prefWidth="32.0" />
+                  <VBox alignment="CENTER" prefHeight="56.0" prefWidth="138.0">
+                     <children>
+                        <Label fx:id="ageMessage" prefHeight="43.0" prefWidth="117.0" style="-fx-font-weight: bold; -fx-text-fill: transparent;" text="insert a valid age" textAlignment="JUSTIFY" textFill="#d30c0c" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="23.0" prefWidth="504.0" />
+            <HBox layoutX="10.0" layoutY="277.0" prefHeight="49.0" prefWidth="504.0">
+               <children>
+                  <Pane prefHeight="56.0" prefWidth="85.0" />
+                  <VBox alignment="CENTER" prefHeight="56.0" prefWidth="172.0">
+                     <children>
+                        <Label text="is your dog vaccinated ?" textFill="#a8a8a8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="56.0" prefWidth="73.0" />
+                  <VBox prefHeight="56.0" prefWidth="170.0">
+                     <children>
+                        <Label textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton fx:id="vaccinationTrue" mnemonicParsing="false" selected="true" text="Yes">
+                           <font>
+                              <Font name="Aller" size="15.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="dogVaccination" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="56.0" prefWidth="32.0" />
+                  <VBox layoutX="256.0" layoutY="10.0" prefHeight="56.0" prefWidth="170.0">
+                     <children>
+                        <Label textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton fx:id="vaccinationFalse" mnemonicParsing="false" selected="true" text="No" toggleGroup="$dogVaccination">
+                           <font>
+                              <Font name="Aller" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="44.0" prefWidth="504.0" />
+            <HBox layoutX="10.0" layoutY="293.0" prefHeight="49.0" prefWidth="504.0">
+               <children>
+                  <Pane prefHeight="56.0" prefWidth="85.0" />
+                  <VBox prefHeight="56.0" prefWidth="172.0">
+                     <children>
+                        <Label text="Dog gender" textFill="#a8a8a8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="56.0" prefWidth="73.0" />
+                  <VBox prefHeight="56.0" prefWidth="170.0">
+                     <children>
+                        <Label textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="Male">
+                           <font>
+                              <Font name="Aller" size="15.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="dogGender" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="56.0" prefWidth="32.0" />
+                  <VBox layoutX="256.0" layoutY="10.0" prefHeight="56.0" prefWidth="170.0">
+                     <children>
+                        <Label textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton fx:id="female" mnemonicParsing="false" selected="true" text="Female" toggleGroup="$dogGender">
+                           <font>
+                              <Font name="Aller" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="42.0" prefWidth="504.0" />
+            <HBox alignment="CENTER" prefHeight="196.0" prefWidth="504.0">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="60.0" prefWidth="380.0">
+                     <children>
+                        <Label text="Description" textFill="#a8a8a8">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox maxHeight="171.0" maxWidth="392.0" prefHeight="171.0" prefWidth="380.0" styleClass="inputField">
+                           <children>
+                              <TextArea fx:id="descriptionTextArea" prefHeight="69.0" prefWidth="376.0" styleClass="transparent" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="7.0" prefWidth="504.0" />
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="86.0" prefWidth="504.0">
+               <children>
+                  <Button fx:id="CancelButton" mnemonicParsing="false" prefHeight="41.0" prefWidth="97.0" styleClass="transparent" text="Cancel" textFill="#686868">
+                     <HBox.margin>
+                        <Insets bottom="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SubmitButton" mnemonicParsing="false" onMousePressed="#submit" prefHeight="40.0" prefWidth="148.0" styleClass="bookButton" text="Submit" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="32.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

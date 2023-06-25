@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="170.115" prefWidth="132.0" styleClass="chienCard" stylesheets="@communityfxml.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ChienCardController">
+   <children>
+      <VBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.115" prefWidth="132.0" style="-fx-background-radius: 10.7042px; -fx-border-radius: 10.7042px;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <ImageView fx:id="dogImage" fitHeight="108.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="133.0">
+               <children>
+                  <Label fx:id="nameLabel" prefHeight="18.0" prefWidth="247.0" style="-fx-font-family: Lato; -fx-font-size: 14px; -fx-font-weight: bold;" text="Label">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ageLabel" prefHeight="20.0" prefWidth="226.0" style="-fx-font-family: Lato; -fx-font-size: 11.9px;" text="Label" textFill="#e0642c">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="23.0" prefWidth="21.0" />
+                  <ImageView fx:id="genderIcon" fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="23.0" />
+                     </HBox.margin></ImageView>
+                  <Pane prefHeight="23.0" prefWidth="182.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="3.0" />
+               </VBox.margin>
+            </HBox>
+            <Pane prefHeight="7.0" prefWidth="105.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="102.0">
+               <children>
+                  <ImageView fitHeight="15.0" fitWidth="10.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/locationIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="22.0" prefWidth="9.0" />
+                  <Label fx:id="locationLabel" style="-fx-font-family: Lato; -fx-font-size: 10px;" text="Label">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Pane prefHeight="14.0" prefWidth="105.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="9.63" right="8.63" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

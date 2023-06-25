@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Log_inController">
+   <children>
+      <Pane layoutX="740.0" layoutY="179.0" prefHeight="400.0" prefWidth="392.0" styleClass="loginContainer">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="238.0" layoutX="95.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/LogoText.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="email" layoutX="59.0" layoutY="101.0" prefHeight="44.0" prefWidth="274.0" promptText="email" styleClass="emailbox" />
+            <PasswordField fx:id="password" layoutX="59.0" layoutY="178.0" prefHeight="44.0" prefWidth="274.0" promptText="password" styleClass="passwordbox" />
+            <Button fx:id="login" layoutX="57.0" layoutY="264.0" mnemonicParsing="false" onAction="#seConnecter" prefHeight="44.0" prefWidth="274.0" styleClass="loginButton" text="Log In" textFill="WHITE" />
+            <Text fx:id="wrongaccess" fill="#eb2727" layoutX="118.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="145.6708984375" />
+            <Button layoutX="120.0" layoutY="340.0" mnemonicParsing="false" onAction="#Forgotpassword" styleClass="fg" text="Forgot password ?" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="453.0" fitWidth="400.0" layoutX="162.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+         <image>
+            <Image url="@../assets/img/loginPicture.png" />
+         </image>
+      </ImageView>
+      <Text fill="#515151" layoutX="782.0" layoutY="621.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don’t have an account ?">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="425.0" layoutY="699.0" styleClass="effect" text="Copyright © 2021, par HabHub. Tous droits réservés" textFill="#cfcdcd" />
+      <Hyperlink layoutX="844.0" layoutY="696.0" styleClass="effect" text="info@habhub.tn" textFill="#cfcdcd" />
+      <Hyperlink layoutX="236.0" layoutY="696.0" styleClass="effect" text="Terms and conditions" textFill="#cfcdcd" />
+      <Hyperlink layoutX="1010.0" layoutY="696.0" styleClass="effect" text="+216 23 070 294" textFill="#cfcdcd" />
+      <Button layoutX="993.0" layoutY="598.0" mnemonicParsing="false" onAction="#switchSceneSignUp" styleClass="signup" text="Sign Up" textFill="#e0642c" />
+   </children>
+   <stylesheets>
+      <URL value="@loginfxml.css" />
+      <URL value="@loginfxml.css" />
+      <URL value="@log_in.css" />
+   </stylesheets>
+</AnchorPane>

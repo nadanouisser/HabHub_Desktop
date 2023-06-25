@@ -1,0 +1,12 @@
+.mainFxmlClass {
+    -fx-background-radius:20px;
+-fx-background-color: #ffffff   ;
+
+}
+
+.playWithMeButton{
+    -fx-background-color:#E0642C;
+    -fx-border-radius:5px;
+    -fx-background-radius:5px;
+    -fx-text-fill:#ffffff;
+}

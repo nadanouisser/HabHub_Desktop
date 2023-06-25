@@ -1,0 +1,169 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.mainFxmlClass {
+-fx-background-color : #F4F4F4;
+
+}
+
+
+
+
+.navBarItems{
+    -fx-background-color : #ffffff;
+
+}
+
+.pane{
+    -fx-background-color: #ffffff;
+    background: #FFFFFF;
+    -fx-effect: dropshadow(gaussian,rgba(0, 0, 0, 0.05) , 20,0 , 0, 0);
+    -fx-background-radius: 15px;
+}
+.imageView{
+     -fx-fit-width: 20px;
+   -fx-fit-height: 20px;
+}
+
+.roundedButton{
+    -fx-background-radius: 15px;
+}
+
+.profileButton {
+    -fx-background-color : #F4F4F4;
+}
+
+
+.businessWidgets {
+    -fx-background-color : #F4F4F4;
+}
+    
+.searchBar{
+    -fx-width: 874px;
+    -fx-height: 51px;
+    -fx-background-color : #FFFFFF;
+    -fx-effect: dropshadow(gaussian,rgba(0, 0, 0, 0.05) , 20,0 , 0, 0);
+    -fx-background-radius: 11.2px;
+
+
+
+
+
+
+
+.VBox{
+   -fx-background-color : #ffffff;
+    -fx-effect: dropshadow(gaussian,rgba(194, 213, 231, 0.7) , 20,0 , 0, 0);
+    -fx-background-radius: 15px;
+}
+
+.navBarItems{
+    -fx-background-color : #ffffff;
+
+}
+
+.pane{
+    -fx-background-color: #ffffff;
+    background: #FFFFFF;
+    -fx-effect: dropshadow(gaussian,rgba(0, 0, 0, 0.05) , 20,0 , 0, 0);
+    -fx-background-radius: 15px;
+}
+.imageView{
+     -fx-fit-width: 20px;
+   -fx-fit-height: 20px;
+}
+
+.roundedButton{
+    -fx-background-radius: 15px;
+}
+
+.profileButton {
+    -fx-background-color : #F4F4F4;
+}
+.transparent{
+    -fx-background-color :rgba(0,0,0,0);
+
+}
+.searchBox{
+    -fx-background-color : #F9f9f9;
+    -fx-background-radius: 11.2px;
+}
+.searchBoxWhite{
+    -fx-background-color : #ffffff;
+    -fx-background-radius: 11.2px;
+    -fx-effect: dropshadow(gaussian,rgba(194, 213, 231, 0.5) , 20,0 , 0, 0);
+
+
+}
+
+.searchBar{
+    -fx-background-color : #ffffff;
+    -fx-border-color:#CFCDCD ;
+    -fx-border-radius:5.6383px;
+    -fx-effect: dropshadow(gaussian,rgba(194, 213, 231, 0.2) , 20,0 , 0, 0);
+
+
+}
+
+
+
+tab-pane .tab-content-area {
+    -fx-background-color: white;
+
+}
+.tab-pane:top *.tab-header-background {
+
+    /* this is area on which tabs are placed */
+
+    -fx-background-color: white ;
+
+}
+
+.tab-pane:top *.tab-header-area {
+
+    -fx-background-insets: 0.0;
+    -fx-padding: 0.0em ;   
+
+}
+
+
+.tab-pane .tab .tab-label {
+
+    -fx-text-fill: #E0642C;
+    -fx-alignment: center; 
+
+
+}
+.tab-header-background {
+    -fx-background-color: transparent;
+
+}
+
+.tab {
+    -fx-background-color: transparent;
+
+}
+.tab:selected {
+    -fx-text-fill: #E0642C;
+    -fx-background-color: #FFEEE8;
+    -fx-border-color:#F9DEB6;
+    -fx-font-weight: bold;
+    -fx-background-radius: 3em;
+    -fx-border-radius: 3em;
+
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-style: segments(0.166667em, 0.166667em);
+    -fx-border-width: 1;
+    -fx-border-color: transparent;
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+     -fx-pref-width: 150.0;
+    -fx-text-fill: -fx-text-base-color;
+}

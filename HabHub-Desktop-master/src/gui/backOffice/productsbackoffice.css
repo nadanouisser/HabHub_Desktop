@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap%27');
+
+.mainFxmlClass {
+ -fx-background-color :#F5F5F5;
+-fx-font-family: 'Lato', sans-serif;
+
+}
+
+.navbar{
+     -fx-background-color :#ffffff;
+    -fx-effect: dropshadow(gaussian,rgba(194, 213, 231, 0.7) , 20,0 , 0, 0);
+
+}
+
+.navItem{
+     -fx-background-color :#ffffff;
+     -fx-border-color :#E5E5E5;
+     -fx-border-width : 1 0 0 0; 
+
+}
+.navItemSelected{
+     -fx-background-color :#FFEEE8;
+     -fx-border-color :#E5E5E5;
+     -fx-border-width : 0 0 0 0; 
+     -fx-text-fill: #E0642C;
+
+}
+.navItemUnderSelected{
+     -fx-background-color :#ffffff;
+     -fx-border-color :#E5E5E5;
+     -fx-border-width : 0 0 0 0; 
+}
+
+
+
+
+tab-pane .tab-content-area {
+    -fx-background-color: white;
+     fx-background-radius: 3em;
+
+
+}
+.tab-pane:top *.tab-header-background {
+
+    /* this is area on which tabs are placed */
+
+    -fx-background-color: white ;
+    -fx-background-radius: 20px 20px 0 0;
+
+}
+
+.tab-pane:top *.tab-header-area {
+
+    -fx-background-insets: 0.0;
+    -fx-padding: 0.0em ;   
+
+}
+
+
+.tab-pane .tab .tab-label {
+
+    -fx-text-fill: #E0642C;
+    -fx-alignment: center; 
+
+
+}
+.tab-header-background {
+    -fx-background-color: transparent;
+
+}
+
+.tab {
+    -fx-background-color: transparent;
+    -fx-border-color:#E5E5E5;
+    -fx-border-width: 0 0 1 0 ;
+        -fx-text-fill: grey;
+
+
+}
+.tab:selected {
+    -fx-text-fill: #E0642C;
+    /*-fx-background-color: #FFEEE8;*/
+    -fx-background-color: white;
+    -fx-border-color:#E0642C;
+    -fx-font-weight: Bold;
+    -fx-border-width: 0 0 3 0 ;
+    -fx-background-radius: 20px;
+    -fx-line-cap: Round;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-style: segments(0.166667em, 0.166667em);
+    -fx-border-width: 1;
+    -fx-border-color: transparent;
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+     -fx-pref-width: 150.0;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.tableBox{
+        -fx-background-color: white;
+        -fx-effect: dropshadow(gaussian,rgba(0, 0 , 0, 0.05) , 50,0 , 0, 0);
+        -fx-background-radius: 20px;
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {   
+    -fx-background-color: white;
+    -fx-stroke: transparent;    
+    -fx-size:50;
+    -fx-alignment: CENTER ;    
+    -fx-text-alignment: center;
+    -fx-border-width: 0 0 1px 0;
+     -fx-border-color: #E5E5E5;
+
+
+}
+.table-row-cell:filled:hover {
+
+    -fx-size:50;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+
+}
+.table-view:row-selection {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-fixed-cell-size: 50;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+}
+
+.table-view .table-column{
+    -fx-text-alignment: center;
+    -fx-alignment: CENTER 
+
+}
+.searchBox{
+    -fx-background-color : #F9f9f9;
+    -fx-background-radius: 11.2px;
+
+
+}
+.searchBar{
+    -fx-background-color : #ffffff;
+    -fx-border-color:#CFCDCD;
+    -fx-border-radius:5.6383px;
+
+
+}
+.transparent{
+    -fx-background-color :rgba(0,0,0,0);
+
+}

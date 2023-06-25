@@ -1,0 +1,118 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+ -fx-background-color : linear-gradient(to bottom,#FFFFFF 0%, #FFF3E1 100%);
+
+}
+
+.loginContainer{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:11;
+     -fx-effect: dropshadow(gaussian,rgba(194, 213, 231, 0.7) , 20,0 , 0, 0);
+     /* Ellipse 14 */
+}
+
+
+
+.fpoasswd{ -fx-background-color:rgba(0,0,0,0);}
+.transparent {
+    -fx-background-color:rgba(0,0,0,0);
+}
+.loginButton
+{
+  /*   -fx-effect: dropshadow(gaussian,rgba(194, 213, 231, 0.7) , 20,0 , 0, 0);*/
+    -fx-background-color:#E0642C;
+    -fx-background-radius:9.17895px;
+     -fx-font-weight: bold;
+      -fx-cursor:hand;
+}
+.loginButton:pressed{
+    
+
+ -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.60), 5, 0.0, 0, 1);
+}
+
+.image{
+    /* Ellipse 14 */
+
+position: absolute;
+width: 367px;
+height: 367px;
+left: 173px;
+top: 213px;
+
+background: url(image.png);
+
+    
+}
+
+/*border: 0.917895px solid #E5E5E5;*/
+.passwordbox{
+    
+      -fx-border-color:#E5E5E5;
+      -fx-border-width: 1px;
+       -fx-border-insets: -1px;
+        -fx-background-radius: 9.17895px;
+}
+
+.emailbox{
+         
+  -fx-border-color:#E5E5E5;
+  -fx-border-width: 1px;
+  -fx-border-insets: -1px;
+  -fx-background-radius: 9.17895px;
+}
+/* 
+background: #FFFFFF;
+border: 0.917895px solid #E5E5E5;
+box-sizing: border-box;
+border-radius: 9.17895px;
+
+
+javafx
+  -fx-background-color:#FFFFFF;
+        -fx-background-border: 0.917895px solid #E5E5E5;
+        -fx-border-radius: 9.17895px;
+*/
+
+
+.nhy{
+    -fx-border-width: 15px;
+    -fx-border-color: yellowgreen;
+    -fx-border-insets: -15px;
+}
+.signup{
+    -fx-font-weight: bold;
+  
+-fx-background-color: transparent;
+
+   
+    -fx-cursor:hand;
+}
+.signup:pressed
+{
+ -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.fg{
+   
+  
+-fx-background-color: transparent;
+
+   
+    -fx-cursor:hand;
+}
+.fg:pressed
+{
+ -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.effect{
+       -fx-cursor:hand;
+}
+.effect :pressed
+{ -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.4), 1, 0.0, 0, 1);
+}
+ 

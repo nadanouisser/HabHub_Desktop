@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+
+.whiteButton {
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:10px;
+    -fx-border-radius:10px;
+    -fx-border-color:#FFC7AC;
+}
+

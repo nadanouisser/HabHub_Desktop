@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-radius:20px;
+-fx-background-color: #ffffff   ;
+
+}
+
+.bookingButton{
+    
+-fx-background-color: #E0642C;
+-fx-background-radius:10px;
+
+}
+
+

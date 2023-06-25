@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BusinessFXMLController">
+   <children>
+      <HBox prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="805.0" prefWidth="70.0" styleClass="VBox" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="navBarItems" textAlignment="CENTER" VBox.vgrow="NEVER">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/HabHub%20logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <Button fx:id="homeButton" minHeight="68.0" mnemonicParsing="false" onAction="#switchHome" prefHeight="107.0" prefWidth="68.0" styleClass="navBarItemsSelected">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                                 <image>
+                                    <Image url="@../assets/img/house-door.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchAdoption" prefHeight="68.0" prefWidth="82.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/zoom-in.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchBoutique" prefHeight="68.0" prefWidth="92.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/Frame%20124.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchHub" prefHeight="68.0" prefWidth="105.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/mating%20icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchProfile" prefHeight="68.0" prefWidth="106.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/gear.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Separator>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="130.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="800.0" prefWidth="1215.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text lineSpacing="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Help owners find their dogs !">
+                           <font>
+                              <Font name="Aller" size="30.0" />
+                           </font>
+                        </Text>
+                        <Pane prefHeight="100.0" prefWidth="673.0" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 50;" styleClass="transparent">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="676.0" prefWidth="1213.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="676.0" prefWidth="870.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox maxHeight="-Infinity" prefHeight="72.0" prefWidth="869.0" VBox.vgrow="SOMETIMES">
+                                 <children>
+                                    <Button fx:id="groomingButton" mnemonicParsing="false" onAction="#displayGrooming" styleClass="transparent">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/business/Grooming.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Pane maxHeight="-Infinity" prefHeight="65.0" prefWidth="200.0" />
+                                    <Button fx:id="parkButton" mnemonicParsing="false" onAction="#displayParks" styleClass="transparent">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="transparent">
+                                             <image>
+                                                <Image url="@../assets/img/business/Parks.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Pane maxHeight="-Infinity" prefHeight="65.0" prefWidth="200.0" />
+                                    <Button fx:id="vetButton" mnemonicParsing="false" onAction="#displayVet" styleClass="transparent">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/business/Veterinary.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" />
+                                    <Button fx:id="dogSittingButton" mnemonicParsing="false" onAction="#displayDogSitting" styleClass="transparent">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="transparent">
+                                             <image>
+                                                <Image url="@../assets/img/business/Frame%20125.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="50.0" prefHeight="30.0" prefWidth="870.0" VBox.vgrow="NEVER" />
+                              <VBox alignment="TOP_CENTER" prefHeight="598.0" prefWidth="870.0" styleClass="left-arrow-button" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="868.0" VBox.vgrow="NEVER" />
+                                    <HBox alignment="TOP_CENTER" maxHeight="70.0" prefHeight="51.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="50.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                          <HBox alignment="CENTER_LEFT" maxHeight="60.0" maxWidth="1300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="850.0" styleClass="searchBoxWhite" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="750.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="500.0" styleClass="searchBar" HBox.hgrow="SOMETIMES">
+                                                   <children>
+                                                      <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/img/searchBar/zoom-in.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <TextField fx:id="searchBox" prefHeight="31.0" prefWidth="423.0" promptText="Search for names, Dog Breeds, Age, Location" styleClass="transparent" />
+                                                   </children>
+                                                </HBox>
+                                                <Pane prefHeight="51.0" prefWidth="200.0" />
+                                                <HBox alignment="CENTER" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" styleClass="searchBar">
+                                                   <children>
+                                                      <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/img/searchBar/funnel.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label text="Filters" />
+                                                   </children>
+                                                </HBox>
+                                                <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                                <HBox alignment="CENTER" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" styleClass="searchBar">
+                                                   <children>
+                                                      <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/img/searchBar/bar-chart-fill.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label text=" Sort" />
+                                                   </children>
+                                                </HBox>
+                                                <Pane minWidth="-Infinity" prefHeight="200.0" prefWidth="20.0" />
+                                             </children>
+                                          </HBox>
+                                          <Pane maxHeight="-Infinity" maxWidth="70.0" prefHeight="50.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" />
+                                    <ScrollPane prefHeight="615.0" prefWidth="880.0">
+                                       <content>
+                                          <GridPane fx:id="grid" alignment="CENTER_LEFT" prefHeight="11.0" prefWidth="868.0">
+                                             <rowConstraints>
+                                                <RowConstraints />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="676.0" prefWidth="13.0" />
+                        <VBox alignment="TOP_CENTER" maxWidth="420.0" prefHeight="676.0" prefWidth="285.0" styleClass="pane" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fx:id="businessImage" fitHeight="202.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                 </cursor>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <image>
+                                    <Image url="@../assets/img/business/dynamic/21.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane prefHeight="18.0" prefWidth="290.0" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="225.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="229.0">
+                                       <children>
+                                          <Label fx:id="businessTitleLabel" prefHeight="31.0" prefWidth="189.0" text="Label">
+                                             <font>
+                                                <Font name="Aller Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Pane prefHeight="300.0" prefWidth="269.0" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="70.0">
+                                             <children>
+                                                <ImageView fitHeight="24.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/img/locationIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="businessLocationLabel" prefHeight="21.0" prefWidth="173.0" text="Label">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#maps" styleClass="transparent">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/business/BusinessItem/image%2016.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fx:id="genderImage" fitHeight="35.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="14.0" prefWidth="290.0" />
+                              <TabPane maxHeight="700.0" minWidth="270.0" prefHeight="338.0" prefWidth="270.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="100.0" VBox.vgrow="ALWAYS">
+                                <tabs>
+                                  <Tab text="Description">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="270.0">
+                                             <children>
+                                                <ScrollPane layoutX="7.0" layoutY="2.0" prefHeight="295.0" prefWidth="268.0">
+                                                   <content>
+                                                      <VBox prefHeight="279.0" prefWidth="227.0">
+                                                         <children>
+                                                            <Pane prefHeight="12.0" prefWidth="227.0" />
+                                                            <Text fx:id="businessDecriptionLabel" fill="#8d8d8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Salwa is a cool puppy. I found her next to a shed on the beach and had to rescue her. But I can’t keep her for long since I already have my hands full." wrappingWidth="220.0" />
+                                                            <HBox fx:id="experienceBox" alignment="CENTER_LEFT" minWidth="31.0" prefHeight="31.0" prefWidth="206.0" visible="false">
+                                                               <children>
+                                                                  <Label fx:id="dogNameLabel1" prefHeight="29.0" prefWidth="89.0" text="Experience :">
+                                                                     <font>
+                                                                        <Font name="Aller Bold" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="experienceLabel" text="Label">
+                                                                     <font>
+                                                                        <Font name="Aller" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" top="10.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" minWidth="31.0" prefHeight="31.0" prefWidth="235.0">
+                                                               <children>
+                                                                  <Label fx:id="dogNameLabel11" prefHeight="29.0" prefWidth="115.0" text="Opening Hours :">
+                                                                     <font>
+                                                                        <Font name="Aller Bold" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="openingHoursLabel" text="Label">
+                                                                     <font>
+                                                                        <Font name="Aller" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="10.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <Label fx:id="serviceIncludeLabel" prefHeight="47.0" prefWidth="167.0" text="Our services include:" textFill="#e0642c" />
+                                                            <GridPane fx:id="gridServices" alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="227.0">
+                                                               <rowConstraints>
+                                                                  <RowConstraints />
+                                                               </rowConstraints>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="10.0" />
+                                                               </VBox.margin>
+                                                            </GridPane>
+                                                            <HBox fx:id="dateBox" prefHeight="41.0" prefWidth="227.0">
+                                                               <children>
+                                                                  <Label prefHeight="21.0" prefWidth="39.0" text="Date" />
+                                                                  <Pane prefHeight="26.0" prefWidth="35.0" />
+                                                                  <DatePicker fx:id="datePicker" prefHeight="31.0" prefWidth="151.0" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" top="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox fx:id="timeBox" prefHeight="41.0" prefWidth="227.0">
+                                                               <children>
+                                                                  <Label prefHeight="21.0" prefWidth="39.0" text="Time" />
+                                                                  <Pane prefHeight="26.0" prefWidth="35.0" />
+                                                                  <ComboBox fx:id="timeComboBox" onAction="#select" prefHeight="67.0" prefWidth="150.0" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" top="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Reviews">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                             <children>
+                                                <ScrollPane layoutX="7.0" prefHeight="316.0" prefWidth="249.0">
+                                                   <content>
+                                                      <VBox prefHeight="268.0" prefWidth="227.0">
+                                                         <children>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <Rating fx:id="reviewRating" prefWidth="96.0" />
+                                                                  <Label prefHeight="41.0" prefWidth="202.0" text="How was your experience ?" textFill="GREY">
+                                                                     <VBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </VBox.margin>
+                                                                     <padding>
+                                                                        <Insets bottom="5.0" top="10.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                                  <TextArea fx:id="reviewText" maxWidth="227.0" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </TextArea>
+                                                                  <HBox alignment="BOTTOM_RIGHT" maxWidth="227.0" prefHeight="21.0" prefWidth="227.0">
+                                                                     <children>
+                                                                        <Button maxHeight="10.0" maxWidth="70.0" mnemonicParsing="false" onAction="#submitRatingButton" prefHeight="10.0" prefWidth="83.0" styleClass="ratingButton" text="Submit" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font name="Aller Bold" size="13.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets top="15.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                            <GridPane fx:id="gridReview" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="227.0">
+                                                               <rowConstraints>
+                                                                  <RowConstraints />
+                                                               </rowConstraints>
+                                                            </GridPane>
+                                                            <Pane prefHeight="140.0" prefWidth="227.0" />
+                                                         </children>
+                                                      </VBox>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </TabPane>
+                              <HBox fx:id="bookBox" alignment="BOTTOM_RIGHT" prefHeight="59.0" prefWidth="290.0">
+                                 <children>
+                                    <Button fx:id="bookButton" disable="true" mnemonicParsing="false" onAction="#ajouterReservation" prefHeight="31.0" prefWidth="129.0" styleClass="bookButton" text="  Book Now" textFill="WHITE">
+                                       <font>
+                                          <Font name="Aller Bold" size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/business/BusinessItem/calendar-check-fill.png" />
+                                             </image></ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" right="15.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </VBox>
+                        <Pane maxWidth="30.0" prefHeight="200.0" prefWidth="20.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@business.css" />
+      <URL value="@navBar.css" />
+   </stylesheets>
+</AnchorPane>

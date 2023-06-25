@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProfileController">
+   <children>
+      <HBox prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="805.0" prefWidth="70.0" styleClass="VBox">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="navBarItems" textAlignment="CENTER" VBox.vgrow="NEVER">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/HabHub%20logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <Button fx:id="homeButton" minHeight="68.0" mnemonicParsing="false" onAction="#switchHome" prefHeight="107.0" prefWidth="68.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                                 <image>
+                                    <Image url="@../assets/img/house-door.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchAdoption" prefHeight="68.0" prefWidth="82.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/zoom-in.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchBoutique" prefHeight="68.0" prefWidth="92.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/Frame%20124.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchHub" prefHeight="68.0" prefWidth="105.0" styleClass="navBarItems">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/mating%20icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button minHeight="68.0" mnemonicParsing="false" onAction="#switchProfile" prefHeight="68.0" prefWidth="106.0" styleClass="navBarItemsSelected">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/gear.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Separator>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="130.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+            <Pane HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="800.0" prefWidth="1215.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#515151" lineSpacing="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hii" text="My Profile">
+                                 <font>
+                                    <Font name="Aller" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Pane prefHeight="100.0" prefWidth="673.0" HBox.hgrow="ALWAYS" />
+                              <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 50;" styleClass="transparent">
+                                 <graphic>
+                                    <ImageView fitHeight="54.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/img/user.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="416.0" prefWidth="1195.0">
+                           <children>
+                              <ImageView fitHeight="170.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/img/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <VBox prefHeight="372.0" prefWidth="569.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Name" />
+                                          <Pane prefHeight="37.0" prefWidth="205.0" />
+                                          <TextField fx:id="name" editable="false" prefHeight="31.0" prefWidth="194.0" styleClass="a" />
+                                          <Button fx:id="editnom" mnemonicParsing="false" onAction="#editname" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Surname" />
+                                          <Pane prefHeight="37.0" prefWidth="185.0" />
+                                          <TextField fx:id="surname" editable="false" prefHeight="31.0" prefWidth="197.0" styleClass="a" />
+                                          <Button fx:id="editprenom" mnemonicParsing="false" onAction="#editsurname" prefHeight="25.0" prefWidth="48.0" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Email" />
+                                          <Pane prefHeight="36.0" prefWidth="205.0" />
+                                          <TextField fx:id="email" editable="false" prefHeight="29.0" prefWidth="195.0" styleClass="b" />
+                                          <Button fx:id="editmail" mnemonicParsing="false" onAction="#editemail" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Phone Number" />
+                                          <Pane prefHeight="38.0" prefWidth="141.0" />
+                                          <TextField fx:id="numtel" editable="false" prefHeight="29.0" prefWidth="197.0" styleClass="c" />
+                                          <Button fx:id="editnumtel" mnemonicParsing="false" onAction="#editnumtel" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Facebook" />
+                                          <Pane prefHeight="37.0" prefWidth="177.0" />
+                                          <TextField fx:id="facebook" editable="false" prefHeight="29.0" prefWidth="196.0" styleClass="d" />
+                                          <Button fx:id="editfb" mnemonicParsing="false" onAction="#editfacebook" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Whatsapp" />
+                                          <Pane prefHeight="37.0" prefWidth="172.0" />
+                                          <TextField fx:id="whatsapp" editable="false" prefHeight="29.0" prefWidth="194.0" styleClass="e" />
+                                          <Button fx:id="editwhatsapp" mnemonicParsing="false" onAction="#editwhatsapp" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Instagram" />
+                                          <Pane prefHeight="37.0" prefWidth="172.0" />
+                                          <TextField fx:id="instagram" editable="false" prefHeight="29.0" prefWidth="197.0" styleClass="f" />
+                                          <Button fx:id="editinstagram" mnemonicParsing="false" onAction="#editinstagram" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="nn" text="Password" />
+                                          <Pane prefHeight="37.0" prefWidth="175.0" />
+                                          <TextField fx:id="password" editable="false" prefHeight="31.0" prefWidth="194.0" styleClass="g" />
+                                          <Button fx:id="editpassword" mnemonicParsing="false" onAction="#editpassword" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Old Password:" />
+                                          <Pane prefHeight="37.0" prefWidth="145.0" />
+                                          <TextField fx:id="passwordinput" prefHeight="29.0" prefWidth="194.0" styleClass="h" />
+                                          <Button mnemonicParsing="false" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="New Password :" />
+                                          <Pane prefHeight="37.0" prefWidth="134.0" />
+                                          <TextField fx:id="password1" prefHeight="29.0" prefWidth="197.0" styleClass="i" />
+                                          <Button mnemonicParsing="false" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Confirm Password:" />
+                                          <Pane prefHeight="37.0" prefWidth="115.0" />
+                                          <TextField fx:id="password1" prefHeight="29.0" prefWidth="194.0" styleClass="j" />
+                                          <Button mnemonicParsing="false" styleClass="aa" text="Edit" textFill="#e0642c" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Pane prefHeight="97.0" prefWidth="936.0">
+                           <children>
+                              <Button fx:id="cancel" layoutX="732.0" layoutY="6.0" mnemonicParsing="false" onAction="#cancelbutton" prefHeight="42.0" prefWidth="95.0" styleClass="cancel" text="Cancel" />
+                              <Button fx:id="save" layoutX="644.0" layoutY="6.0" mnemonicParsing="false" onAction="#savebutton" prefHeight="42.0" prefWidth="95.0" styleClass="save" text="Save" textFill="#e0642c" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="800.0" prefWidth="17.0" />
+            <Pane prefHeight="567.0" prefWidth="66.0" />
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@profile.css" />
+      <URL value="@navBar.css" />
+   </stylesheets>
+</AnchorPane>

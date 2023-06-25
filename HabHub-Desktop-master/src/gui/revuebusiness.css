@@ -1,0 +1,13 @@
+
+.mainFxmlClass {
+    -fx-background-color : #ffffff;
+
+}
+.greyLabel{
+    -fx-text-fill:#ADADAD;
+}
+
+.transparent{
+    -fx-background-color: transparent;
+
+}

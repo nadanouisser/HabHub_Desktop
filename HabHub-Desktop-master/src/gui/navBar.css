@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.mainFxmlClass {
+-fx-background-color : #F4F4F4;
+
+}
+
+.navBarItemsSelected{
+    -fx-background-radius: 10px;
+    -fx-background-color: #FBE4DC;
+   
+}

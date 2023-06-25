@@ -1,0 +1,25 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian,rgba(0, 0, 0, 0.05) , 20,0 , 0, 0);
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.pane{
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian,rgba(0, 0, 0, 0.05) , 20,0 , 0, 0);
+    -fx-background-radius: 15px;
+}
+.paneSelected{
+   -fx-background-color: #FFEEE8;
+
+}
+.price{
+    -fx-background-color: #FFEEE8;
+    
+    -fx-background-radius: 10px;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="291.0" prefWidth="227.0" styleClass="chienCard" stylesheets="@communityfxml.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DogBigCardController">
+   <children>
+      <VBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.115" prefWidth="132.0" style="-fx-background-radius: 10.7042px; -fx-border-radius: 10.7042px;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <ImageView fx:id="dogImage" fitHeight="196.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="8.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Pane prefHeight="11.0" prefWidth="217.0" />
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="133.0">
+               <children>
+                  <Label fx:id="nameLabel" prefHeight="33.0" prefWidth="267.0" style="-fx-font-family: Lato; -fx-font-size: 26px; -fx-font-weight: bold;" text="Label">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ageLabel" prefHeight="20.0" prefWidth="226.0" style="-fx-font-family: Lato; -fx-font-size: 22px;" text="Label" textFill="#e0642c">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="33.0" prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="3.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="212.0">
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="133.0" />
+                  <Label fx:id="likeNumberLabel" prefHeight="17.0" prefWidth="21.0">
+                     <font>
+                        <Font name="Lato Bold" size="15.0" />
+                     </font></Label>
+                  <Pane prefHeight="50.0" prefWidth="11.0" />
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/chien/heartIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="7.0" prefWidth="105.0" />
+            <Pane prefHeight="44.0" prefWidth="240.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="9.63" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
